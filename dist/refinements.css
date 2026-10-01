@@ -36,3 +36,10 @@
 @media(prefers-reduced-motion:reduce){.hero h1 span,.accent-word.is-visible{animation:none}.warm,.cool{transform:none}.review-card,.review-card:nth-child(2){transition:none;transform:none}.quick-actions .pill{transition:none}.quick-actions .pill:hover{transform:none}}
 
 .service-photo.supplied-art{height:auto;aspect-ratio:1024/820}.service-photo.supplied-art img{object-fit:contain;filter:none}.service-photo.supplied-art:after{display:none}
+
+.service-photo.massage-art{container-type:inline-size}
+.service-photo.massage-art img{object-fit:cover;object-position:center;height:100%;position:absolute;inset:0}
+.service-photo.massage-art:before{content:"";position:absolute;z-index:1;inset:0;background:radial-gradient(ellipse at 12% 9%,#191512b3,transparent 63%);pointer-events:none}
+.artwork-caption{position:absolute;z-index:2;top:8%;left:5.8%;color:#e6e2d8;text-shadow:0 1px 3px #0008;font-family:Arial,sans-serif}
+.artwork-title{display:block;font-size:4.1cqw;font-weight:400;line-height:1.14;letter-spacing:0}
+.artwork-tagline{display:block;font-size:3cqw;font-weight:500;line-height:1.15;margin-top:1.2cqw;border-left:2px solid currentColor;padding-left:1.2cqw}
