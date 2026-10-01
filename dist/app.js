@@ -61,3 +61,48 @@ track.addEventListener('keydown', event => {
 });
 new ResizeObserver(scheduleReviews).observe(track);
 updateReviews();
+
+const accentObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      accentObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: .6 });
+document.querySelectorAll('.accent-word').forEach(word => accentObserver.observe(word));
+
+// Readable six-second cadence; suspend offscreen, in background tabs and during interaction.
+const playback = document.getElementById('review-play');
+const reviewSection = document.getElementById('reviews');
+let userPaused = motion.matches;
+let inView = false;
+let hovering = false;
+let focused = false;
+let autoTimer;
+function syncPlayback() {
+  clearTimeout(autoTimer);
+  playback.textContent = userPaused ? 'Play' : 'Pause';
+  playback.setAttribute('aria-label', `${userPaused ? 'Play' : 'Pause'} automatic reviews`);
+  const running = !userPaused && inView && !hovering && !focused && !document.hidden;
+  status.setAttribute('aria-live', running ? 'off' : 'polite');
+  if (running) autoTimer = setTimeout(() => {
+    goToReview((current + 1) % cards.length);
+    syncPlayback();
+  }, 6000);
+}
+playback.addEventListener('click', () => { userPaused = !userPaused; syncPlayback(); });
+track.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse') { hovering = true; syncPlayback(); } });
+track.addEventListener('pointerleave', () => { hovering = false; syncPlayback(); });
+track.addEventListener('pointerdown', () => { userPaused = true; syncPlayback(); });
+reviewSection.addEventListener('focusin', event => { focused = event.target !== playback; syncPlayback(); });
+reviewSection.addEventListener('focusout', () => { focused = false; syncPlayback(); });
+previous.addEventListener('click', () => { userPaused = true; syncPlayback(); });
+next.addEventListener('click', () => { userPaused = true; syncPlayback(); });
+document.addEventListener('visibilitychange', syncPlayback);
+motion.addEventListener('change', () => { userPaused = motion.matches; syncPlayback(); });
+new IntersectionObserver(entries => {
+  inView = entries[0].isIntersecting;
+  syncPlayback();
+}, { threshold: .35 }).observe(track);
+syncPlayback();

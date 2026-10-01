@@ -21,3 +21,10 @@ The two `.photo-slot` elements in `dist/index.html` mark exterior and interior i
 - New readable sans-serif orange wordmark with light-blue stroke and staggered appearance animation. Reduced-motion stylesheet removes entrance animation and slide scaling.
 - Hero action hover inspected; orange background with dark readable text.
 - Stock photo sources recorded in STOCK-PHOTOS.md.
+
+## Teal accents and automatic experiences
+- Five headline words use #A8DADC with one-time viewport entrance accents.
+- All four hero action buttons share their neutral rest appearance and orange hover/pressed states.
+- Nine review excerpts, all from the supplied user text. Carousel advances every six seconds while visible, loops to first, and has Play/Pause controls. Pauses on interaction, offscreen, hidden tabs and reduced-motion preference.
+- Browser observed automatic advancement and centered focus of 1.000. Pause changed the control to Play.
+- Orange ambient light strengthened; muted teal light follows inverse scroll progress.

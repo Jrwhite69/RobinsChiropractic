@@ -1,4 +1,11 @@
 /* Readable wordmark, with the orange fill painted over a delicate blue outline. */
+:root{--teal:#a8dadc}
+.accent-word{color:var(--teal);display:inline-block}
+.accent-word.is-visible{animation:accent-arrive 1s cubic-bezier(.2,.75,.25,1) both}
+@keyframes accent-arrive{0%{opacity:.55;transform:translateY(.18em);text-shadow:0 0 0 transparent}55%{text-shadow:0 0 24px #a8dadc88}100%{opacity:1;transform:none;text-shadow:0 0 0 transparent}}
+.warm{background:radial-gradient(ellipse,#ff6b3552,transparent 66%);left:-30%;transform:translate3d(calc(var(--progress)*65vw),calc(var(--progress)*18vh),0)}
+.cool{background:radial-gradient(ellipse,#a8dadc3d,transparent 65%);right:-35%;transform:translate3d(calc(var(--progress)*-65vw),calc(var(--progress)*-28vh),0)}
+.quick-actions .pill:active{background:var(--orange);border-color:var(--orange);color:#20140e;transform:translateY(0)}
 .hero h1{font-family:"Segoe UI",Arial,sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.055em;-webkit-text-stroke:1.5px #9dceff;paint-order:stroke fill}
 .hero h1 span{animation:brand-arrive 1.1s cubic-bezier(.2,.75,.25,1) both}
 .hero h1 span:first-child{font-size:clamp(5rem,11.5vw,10rem)}
@@ -25,4 +32,5 @@
 .review-controls button:focus-visible,.review-stack:focus-visible{outline:2px solid #9dceff;outline-offset:4px}
 #review-status{font-size:.875rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 @media(max-width:760px){.hero h1{-webkit-text-stroke:1px #9dceff}.hero h1 span:first-child{font-size:clamp(4rem,20vw,7rem)}.hero h1 span:last-child{font-size:clamp(1.65rem,7.55vw,3.5rem)}.service-photo{margin:-29px -24px 27px;height:210px}.review-stack{--card-width:80vw;gap:12px;padding-top:36px;padding-bottom:40px}.review-card{padding:27px;min-height:310px}.review-controls{gap:18px}.review-controls button{padding:12px 18px}}
-@media(prefers-reduced-motion:reduce){.hero h1 span{animation:none}.review-card,.review-card:nth-child(2){transition:none;transform:none}.quick-actions .pill{transition:none}.quick-actions .pill:hover{transform:none}}
+@media(max-width:760px){.review-controls{gap:10px;flex-wrap:wrap}.review-controls button{padding:10px 14px}.warm{left:-80%}.cool{right:-80%}}
+@media(prefers-reduced-motion:reduce){.hero h1 span,.accent-word.is-visible{animation:none}.warm,.cool{transform:none}.review-card,.review-card:nth-child(2){transition:none;transform:none}.quick-actions .pill{transition:none}.quick-actions .pill:hover{transform:none}}
