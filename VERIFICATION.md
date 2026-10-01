@@ -28,3 +28,8 @@ The two `.photo-slot` elements in `dist/index.html` mark exterior and interior i
 - Nine review excerpts, all from the supplied user text. Carousel advances every six seconds while visible, loops to first, and has Play/Pause controls. Pauses on interaction, offscreen, hidden tabs and reduced-motion preference.
 - Browser observed automatic advancement and centered focus of 1.000. Pause changed the control to Play.
 - Orange ambient light strengthened; muted teal light follows inverse scroll progress.
+
+## Futura branding update
+- All shared orange text and accents now #FF5722, including favicon and review glow hue.
+- Wordmark prefers Futura, Futura PT, Futura Std, Century Gothic, then sans-serif. No Futura installed locally or licensed webfont supplied; actual Futura rendering remains dependent on visitor fonts until a licensed webfont is provided.
+- Header entrance revised to a staggered 1.5-second upward reveal with a restrained settle; reduced motion retains static readable text.
