@@ -48,3 +48,39 @@
 :root{--ink:#fff;--muted:#fff}
 .practitioner,.portrait-caption,.practitioner-name{color:var(--teal)}
 .portrait-caption small{color:var(--ink)}
+
+/* Larger mobile copy; retain the existing logo and heading proportions. */
+@media(max-width:760px){
+  .bio-copy>p:not(.small-label),.intro p:last-child,.offering p,.section-heading p,.conditions p,.reviews>div:first-child>p:not(.small-label),.footer>div:first-child>p{font-size:1.125rem;line-height:1.7}
+  .practitioner{font-size:1.375rem}
+  .hero>address,.footer-details,.offering ul{font-size:1rem}
+  .quick-actions .pill{font-size:.9375rem;min-width:0;line-height:1.4}
+  .quick-actions .pill svg{flex-shrink:0}
+  .quick-actions .pill>span{min-width:0}
+  .section-nav{font-size:.875rem;gap:4px 12px;justify-content:center}
+  .section-nav a{min-height:44px;display:inline-flex;align-items:center}
+  .small-label,.closed,.contact-line,.license,.photo-slot small,.gallery-note,.review-source,.review-card figcaption,.review-controls button,#review-status{font-size:.9375rem}
+  .portrait-caption small,.review-card figcaption small,.footer-details small,.footer-details strong,.tags span{font-size:.875rem}
+  .license,.contact-line,.portrait-caption small,.footer-details small{line-height:1.6}
+  .review-card blockquote{font-size:1.375rem}
+  .bio-copy,.offering,.hours-card,.footer-details{min-width:0}
+  .email{overflow-wrap:anywhere}
+}
+
+/* Dimensional signage: exact orange face, lit bevel, shaded orange extrusion.
+   Em units scale the depth with the unchanged desktop/mobile type sizes. */
+.hero h1{--sign-edge:color-mix(in srgb,var(--orange) 48%,#191512);--sign-side:color-mix(in srgb,var(--orange) 33%,#191512)}
+.hero h1 span{position:relative;color:var(--orange);-webkit-text-stroke:.012em var(--sign-edge);paint-order:stroke fill;text-shadow:
+ -.008em .008em 0 var(--sign-edge),
+ -.016em .016em 0 var(--sign-edge),
+ -.024em .024em 0 var(--sign-edge),
+ -.032em .032em 0 var(--sign-side),
+ -.040em .040em 0 var(--sign-side),
+ -.048em .048em 0 var(--sign-side),
+ -.055em .055em 0 #191512,
+ -.065em .075em .022em #0009,
+ -.09em .13em .085em #0008,
+ -.14em .22em .18em #0005}
+.hero h1 span::after{content:attr(data-lettering) / "";position:absolute;inset:0;pointer-events:none;color:transparent;-webkit-text-stroke:.009em color-mix(in srgb,var(--orange) 65%,white);text-shadow:none;mask-image:linear-gradient(145deg,#000 0%,#0008 38%,transparent 75%)}
+/* Keep the existing entrance, but leave room for the physical cast shadow. */
+@keyframes brand-arrive{0%{opacity:0;transform:translateY(38px) scale(.92);clip-path:inset(0 0 100% 0)}60%{opacity:1;clip-path:inset(-30%);transform:translateY(-3px) scale(1.01)}100%{opacity:1;clip-path:inset(-30%);transform:translateY(0) scale(1)}}
