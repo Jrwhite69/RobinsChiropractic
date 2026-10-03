@@ -13,7 +13,116 @@
   <link rel="stylesheet" href="styles.css?v=brand-ff5722">
   <link rel="stylesheet" href="refinements.css?v=larger-hero">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"MedicalBusiness","name":"Robins Chiropractic Center","telephone":"+1-954-523-5336","faxNumber":"+1-954-523-5338","email":"robinschiro@yahoo.com","medicalSpecialty":"Chiropractic","address":{"@type":"PostalAddress","streetAddress":"2211 N Dixie Highway","addressLocality":"Wilton Manors","addressRegion":"FL","postalCode":"33305","addressCountry":"US"},"hasMap":"https://www.google.com/maps/search/?api=1&query=Robins+Chiropractic+Center+2211+N+Dixie+Highway+Wilton+Manors+FL+33305","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Friday"],"opens":"09:00","closes":"13:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Friday"],"opens":"15:00","closes":"18:00"}],"identifier":{"@type":"PropertyValue","propertyID":"Massage Establishment License","value":"MM13585"},"employee":{"@type":"Person","name":"Dr. Bruce Robins","jobTitle":"Chiropractor","identifier":{"@type":"PropertyValue","propertyID":"Florida Chiropractic License","value":"CH6807"}}}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "MedicalBusiness",
+        "Physician"
+      ],
+      "name": "Robins Chiropractic Center",
+      "telephone": "+1-954-523-5336",
+      "faxNumber": "+1-954-523-5338",
+      "email": "robinschiro@yahoo.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2211 N Dixie Highway",
+        "addressLocality": "Wilton Manors",
+        "addressRegion": "FL",
+        "postalCode": "33305",
+        "addressCountry": "US"
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Robins+Chiropractic+Center+2211+N+Dixie+Highway+Wilton+Manors+FL+33305",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+          ],
+          "opens": "15:00",
+          "closes": "18:00"
+        }
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Massage Establishment License",
+        "value": "MM13585"
+      },
+      "@id": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#practice",
+      "url": "https://robins-chiropractic.masculineandmagical.chatgpt.site/",
+      "description": "Robins Chiropractic Center in Wilton Manors, South Florida, provides chiropractic adjustments and clinical massage therapy. Dr. Bruce Robins is a Broward County native with over 30 years of experience in chiropractic and therapeutic care.",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "South Florida"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Broward County, Florida"
+        }
+      ],
+      "employee": {
+        "@id": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#dr-bruce-robins"
+      },
+      "availableService": [
+        {
+          "@id": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#chiropractic-adjustments"
+        },
+        {
+          "@id": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#clinical-massage-therapy"
+        }
+      ],
+      "image": [
+        "https://robins-chiropractic.masculineandmagical.chatgpt.site/assets/office-exterior.png",
+        "https://robins-chiropractic.masculineandmagical.chatgpt.site/assets/office-interior.png"
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Dr. Bruce Robins",
+      "jobTitle": "Chiropractor",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Florida Chiropractic License",
+        "value": "CH6807"
+      },
+      "@id": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#dr-bruce-robins",
+      "url": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#doctor",
+      "description": "Dr. Bruce Robins is a Broward County native with over 30 years of experience in chiropractic and therapeutic care in South Florida. His approach emphasizes patient connection, education, and personal care.",
+      "worksFor": {
+        "@id": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#practice"
+      },
+      "image": "https://robins-chiropractic.masculineandmagical.chatgpt.site/assets/dr-bruce-robins.jpg"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "@id": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#chiropractic-adjustments",
+      "name": "Chiropractic adjustments",
+      "description": "Hands-on chiropractic adjustments and structural alignment, including spinal and extremity adjustments.",
+      "url": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#care"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "@id": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#clinical-massage-therapy",
+      "name": "Clinical massage therapy",
+      "description": "Therapeutic massage and deep tissue therapy focused on muscular tension and comfort.",
+      "url": "https://robins-chiropractic.masculineandmagical.chatgpt.site/#care"
+    }
+  ]
+}
   </script>
   <!-- Exact geo coordinates, GA4 measurement ID and Search Console token await owner verification. -->
   <script src="app.js" defer></script>
