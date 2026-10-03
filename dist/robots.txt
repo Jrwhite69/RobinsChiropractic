@@ -1,0 +1,5 @@
+# Allow all search and AI crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://robins-chiropractic.masculineandmagical.chatgpt.site/sitemap.xml

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home, About/Bio, Chiropractic, Massage Therapy, and Contact/Open
+       Appointments currently share this single page. Add a url entry for
+       each separate page only after it has a live, canonical URL. -->
+  <url>
+    <loc>https://robins-chiropractic.masculineandmagical.chatgpt.site/</loc>
+  </url>
+</urlset>
